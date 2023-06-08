@@ -1,7 +1,7 @@
 USE 5to_BetGambler;
 
 INSERT INTO Continente (idContinente, continente)
-VALUES	(1, "América del Norte"),
+VALUES		(1, "América del Norte"),
 		(2, "América del Sur"),
 		(3, "Europa"),
 		(4, "Asia"),
@@ -9,7 +9,7 @@ VALUES	(1, "América del Norte"),
 		(6, "Africa");
 		
 INSERT INTO Pais(idPais, pais, idContinente)
-VALUES	(1, "Argentina", 2),
+VALUES		(1, "Argentina", 2),
 		(2, "Brasil", 2),
 		(3, "Chile", 2),
 		(4, "Paraguay", 2),
@@ -26,15 +26,15 @@ VALUES	(1, "Argentina", 2),
 		(15, "Japon", 4);
 	
 INSERT INTO Estado_Apuesta (idEstado, estado)
-VALUES	(1, "En Proceso"),
+VALUES		(1, "En Proceso"),
 		(2, "Empezada"),
 		(3, "Terminada");
 		
 INSERT INTO Temporada(idTemporada, temporada)
-VALUES	(1, 2023);
+VALUES		(1, 2023);
 
 INSERT INTO Tipo_Apuesta (tipoApuesta, apuesta)
-VALUES	(1, "Goles"),
+VALUES		(1, "Goles"),
 		(2, "Resultado");
 	
 INSERT INTO Equipo (nombre, idPais, entrenador)
@@ -69,7 +69,7 @@ VALUES	("Boca Juniors", 1, "Jorge Almirón"),
 
 	
 INSERT INTO Liga (idLiga, nombre, idTemporada, idPais)
-VALUES 	(1, "Liga Profesional de Futbol", 1, 1),
+VALUES 		(1, "Liga Profesional de Futbol", 1, 1),
 		(2, "Master League Soccer", 1, 5),
 		(3, "Ligue 1", 1, 9),
 		(4, "Primera B Nacional", 1, 1),
@@ -78,16 +78,16 @@ VALUES 	(1, "Liga Profesional de Futbol", 1, 1),
 		(7, "Premier League", 1, 12);
 
 INSERT INTO Estadio (idEstadio, nombre, informacion)
-VALUES 	(1, "La Bombonera", "Estadio de Boca Juniors, ubicado en La Boca."),
+VALUES 		(1, "La Bombonera", "Estadio de Boca Juniors, ubicado en La Boca."),
 		(2, "El Monumental", "Estadio de River Plate, ubicado en Nuñez"),
 		(3, "El Cilindro", "Estadio de Racing Club, ubicado en Avellaneda"),
 		(4, "El Bosque", "Estadio de Gimnasia, ubicado en La Plata");
 
 INSERT INTO Copa (idCopa, nombre, idTemporada, idContinente)
-VALUES (1, "CONMEBOL Libertadores de América", 1, 2);
+VALUES 		(1, "CONMEBOL Libertadores de América", 1, 2);
 
 INSERT INTO Fecha_Partido (fecha)
-VALUES	(1),
+VALUES		(1),
 		(2),
 		(3),
 		(4),
@@ -107,17 +107,17 @@ VALUES	(1),
 		(18);
 	
 INSERT INTO Estado_Partido (idEstado, estado)
-VALUES	(1, "A disputar"),
+VALUES		(1, "A disputar"),
 		(2, "En Juego"),
 		(3, "Suspendido"),
 		(4, "Postergado"),
 		(5, "Terminado");
 		
 INSERT INTO Partido (idPartido, equipo_local, equipo_visitante, idFecha, idEstadio, idEstado)
-VALUES (1, 1, 2, 15, 1, 2);
+VALUES 		(1, 1, 2, 15, 1, 2);
 
 INSERT INTO Partido_Liga (idPartido, idLiga)
-VALUES (1, 1);
+VALUES 		(1, 1);
 	
 CALL AltaUsuario ("SoyAdmin", "Administrador", "adminroot@gmail.com", 999.99, 18, "2004-12-25");
 
