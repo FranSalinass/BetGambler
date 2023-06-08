@@ -39,7 +39,34 @@ VALUES	(1, "Goles"),
 	
 INSERT INTO Equipo (nombre, idPais, entrenador)
 VALUES	("Boca Juniors", 1, "Jorge Almirón"),
-		("River Plate", 1, "Martin Demichelis");
+	("River Plate", 1, "Martin Demichelis"),
+	(“Estudiantes”, 1, “Eduardo Domínguez”),
+	(“Talleres”, 1, “Javier Gandolfi”),
+	(“San Lorenzo”, 1, “Rubén Darío Insúa”),
+	(“Rosario Central”, 1, “Miguel Ángel Russo”),
+	(“Lanús”, 1, “Frank Darío Kudelka”),
+	(“Belgrano”, 1, “Guillermo Farré”),
+	(“Defensa y Justicia”, 1, “Julio Vaccari”),
+	(“Godoy Cruz”, 1, “Diego Flores”),
+	(“Newell´s”, 1, “Gabriel Heinze”),
+	(“Argentinos Juniors”, 1, “Gabriel Milito”),
+	(“Sarmiento”, 1, “Israel Damonte”),
+	(“Platense”, 1, “Martín Palermo”),
+	(“Central Córdoba”, 1, “Leonardo Madelón”),
+	(“Tigre”, 1, “Diego Hernán Martínez”),
+	(“Racing Club”, 1, “Fernando Gago”),
+	(“Barracas Central”, 1, “Sergio Rondina”),
+	(“Gimnasia”, 1, “Sebastian Romero”),
+	(“Instituto”, 1, “Daniel Jiménez”),
+	(“Colón”, 1, “Néstor Gorosito”),
+	(“Vélez”, 1, “Marcelo Bravo”),
+	(“Independiente”, 1, “Ricardo Zielinski”),
+	(“Atlético Tucumán”, 1, “Lucas Pusineri”),
+	(“Huracán”, 1, “Sebastián Battaglia”),
+	(“Banfield”, 1, “Julio César Falcioni”),
+	(“Unión”, 1, “Sebastián Méndez”),
+	(“Arsenal”, 1, “Federico Vilar”);
+
 	
 INSERT INTO Liga (idLiga, nombre, idTemporada, idPais)
 VALUES 	(1, "Liga Profesional de Futbol", 1, 1),
