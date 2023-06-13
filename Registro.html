@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetGambler - Apuestas Deportivas</title>
+  <style>
+    /* Estilos CSS para personalizar la apariencia de la página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      background-image: url('istockphoto-530810426-612x612.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #0142cf;
+      background-size: 1000px;
+      color: #000000;
+      padding: 7px;
+      text-align: left;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 300px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #F7F7F7;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BetGambler</h1>
+    <p>Tu destino para las mejores apuestas deportivas</p>
+  </header>
+
+  <main>
+    <h2>Bienvenido a BetGambler</h2>
+    <p>¡Disfruta de una emocionante experiencia de apuestas deportivas en BetGambler!</p>
+  
+    <h3>Regístrate</h3>
+    <form class="registro-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+  
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni" required>
+  
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="contrasena">Contraseña:</label>
+      <div class="contrasena-container">
+        <input type="password" id="contrasena" name="contrasena" required>
+        <button type="button" class="toggle-contrasena" onclick="togglePasswordVisibility()">
+          Mostrar
+        </button>
+      </div>
+  
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" required>
+  
+      <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+      <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+  
+      <label for="apodo">Apodo:</label>
+      <input type="text" id="apodo" name="apodo">
+  
+      <button type="submit" name="Registrarse" onclick="return validarFormulario()">Registrarse</button>
+    </form>
+  </main>
+  
+  <style>
+    .registro-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  
+    .registro-form input {
+      display: block;
+      margin-bottom: 10px;
+      width: 40%;
+      padding: 5px;
+    }
+  
+    .contrasena-container {
+      position: relative;
+    }
+  
+    .toggle-contrasena {
+      position: absolute;
+      right: 400px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background-color: transparent;
+      color: #999;
+      cursor: pointer;
+    }
+  </style>
+  
+  <script>
+    function togglePasswordVisibility() {
+      var contrasenaInput = document.getElementById("contrasena");
+      var toggleButton = document.querySelector(".toggle-contrasena");
+  
+      if (contrasenaInput.type === "password") {
+        contrasenaInput.type = "text";
+        toggleButton.textContent = "Ocultar";
+      } else {
+        contrasenaInput.type = "password";
+        toggleButton.textContent = "Mostrar";
+      }
+    }
+  </script>  
+
+  <script>
+    function validarFormulario() {
+        // Validar los campos del formulario
+        var contraseña = document.getElementById("contraseña").value;
+        var nombre = document.getElementById("nombre").value;
+        var apodo = document.getElementById("apodo").value;
+        var dni = document.getElementById("dni").value;
+        var mail = document.getElementById("mail").value;
+        var edad = document.getElementById("edad").value;
+        var fechaNacimiento = document.getElementById("fecha_nacimiento").value;
+
+        // Realizar las validaciones necesarias
+        if (contraseña === "" || nombre === "" || apodo === "" || dni === "" || mail === "" || edad === "" || fechaNacimiento === "") {
+            alert("Por favor, complete todos los campos.");
+            return false; // Evitar el envío del formulario si hay campos vacíos
+        }
+
+        // Si todos los campos están completos, se enviará el formulario
+        return true;
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2023 BetGambler. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
