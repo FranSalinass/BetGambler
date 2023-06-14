@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BetGambler - Apuestas Deportivas</title>
+  <title>Registro - BetGambler</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="server" type="server" href="server.js">
+
   <style>
-    /* Estilos CSS para personalizar la apariencia de la página */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -51,13 +53,23 @@
     <h1>BetGambler</h1>
     <p>Tu destino para las mejores apuestas deportivas</p>
   </header>
+  <nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="partidos.html">Partidos</a></li>
+        <li><a href="tablas.html">Tablas de Posición</a></li>
+        <li><a href="misapuestas.html">Mis Apuestas</a></li>
+        <li><a href="MiCuenta.html">Mi Cuenta</a></li> 
+    </ul>
+</nav>
 
   <main>
     <h2>Bienvenido a BetGambler</h2>
     <p>¡Disfruta de una emocionante experiencia de apuestas deportivas en BetGambler!</p>
   
     <h3>Regístrate</h3>
-    <form class="registro-form">
+    <form class="registro-form" action='/Registrar' method="POST">
+      
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required>
   
@@ -134,7 +146,6 @@
 
   <script>
     function validarFormulario() {
-        // Validar los campos del formulario
         var contraseña = document.getElementById("contraseña").value;
         var nombre = document.getElementById("nombre").value;
         var apodo = document.getElementById("apodo").value;
@@ -142,18 +153,31 @@
         var mail = document.getElementById("mail").value;
         var edad = document.getElementById("edad").value;
         var fechaNacimiento = document.getElementById("fecha_nacimiento").value;
-
-        // Realizar las validaciones necesarias
-        if (contraseña === "" || nombre === "" || apodo === "" || dni === "" || mail === "" || edad === "" || fechaNacimiento === "") {
-            alert("Por favor, complete todos los campos.");
-            return false; // Evitar el envío del formulario si hay campos vacíos
-        }
-
-        // Si todos los campos están completos, se enviará el formulario
         return true;
     }
+
+
+    function convertirFecha(fecha_nacimiento) {
+  // Dividir la fecha en partes (mes, día, año)
+  var partes = fecha.split(' ');
+
+  // Obtener las partes individuales
+  var mes = partes[0];
+  var dia = partes[1];
+  var anio = partes[2];
+
+  // Crear un objeto Date con la fecha en formato mm dd aaaa
+  var fechaObjeto = new Date(mes + ' ' + dia + ', ' + anio);
+
+  // Obtener las partes individuales de la nueva fecha en formato aaaa mm dd
+  var nuevaFecha = fechaObjeto.getFullYear() + ' ' + (fechaObjeto.getMonth() + 1) + ' ' + fechaObjeto.getDate();
+
+  return nuevaFecha;
+  fecha_nacimiento = nuevaFecha;
+}
   </script>
 
+  
   <footer>
     <p>&copy; 2023 BetGambler. Todos los derechos reservados.</p>
   </footer>
