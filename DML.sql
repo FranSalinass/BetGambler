@@ -1,3 +1,5 @@
+-- Active: 1684371989218@@127.0.0.1@3306
+
 USE 5to_BetGambler;
 
 INSERT INTO Continente (idContinente, continente)
@@ -40,32 +42,32 @@ VALUES		(1, "Goles"),
 INSERT INTO Equipo (nombre, idPais, entrenador)
 VALUES	("Boca Juniors", 1, "Jorge Almirón"),
 	("River Plate", 1, "Martin Demichelis"),
-	(“Estudiantes”, 1, “Eduardo Domínguez”),
-	(“Talleres”, 1, “Javier Gandolfi”),
-	(“San Lorenzo”, 1, “Rubén Darío Insúa”),
-	(“Rosario Central”, 1, “Miguel Ángel Russo”),
-	(“Lanús”, 1, “Frank Darío Kudelka”),
-	(“Belgrano”, 1, “Guillermo Farré”),
-	(“Defensa y Justicia”, 1, “Julio Vaccari”),
-	(“Godoy Cruz”, 1, “Diego Flores”),
-	(“Newell´s”, 1, “Gabriel Heinze”),
-	(“Argentinos Juniors”, 1, “Gabriel Milito”),
-	(“Sarmiento”, 1, “Israel Damonte”),
-	(“Platense”, 1, “Martín Palermo”),
-	(“Central Córdoba”, 1, “Leonardo Madelón”),
-	(“Tigre”, 1, “Diego Hernán Martínez”),
-	(“Racing Club”, 1, “Fernando Gago”),
-	(“Barracas Central”, 1, “Sergio Rondina”),
-	(“Gimnasia”, 1, “Sebastian Romero”),
-	(“Instituto”, 1, “Daniel Jiménez”),
-	(“Colón”, 1, “Néstor Gorosito”),
-	(“Vélez”, 1, “Marcelo Bravo”),
-	(“Independiente”, 1, “Ricardo Zielinski”),
-	(“Atlético Tucumán”, 1, “Lucas Pusineri”),
-	(“Huracán”, 1, “Sebastián Battaglia”),
-	(“Banfield”, 1, “Julio César Falcioni”),
-	(“Unión”, 1, “Sebastián Méndez”),
-	(“Arsenal”, 1, “Federico Vilar”);
+	("Estudiantes", 1, "Eduardo Domínguez"),
+	("Talleres", 1, "Javier Gandolfi"),
+	("San Lorenzo", 1, "Rubén Insúa"),
+	("Rosario Central", 1, "Miguel Russo"),
+	("Lanús", 1, "Frank Kudelka"),
+	("Belgrano", 1, "Guillermo Farré"),
+	("Defensa y Justicia", 1, "Julio Vaccari"),
+	("Godoy Cruz", 1, "Diego Flores"),
+	("Newell´s", 1, "Gabriel Heinze"),
+	("Argentinos Juniors", 1, "Gabriel Milito"),
+	("Sarmiento", 1, "Israel Damonte"),
+	("Platense", 1, "Martín Palermo"),
+	("Central Córdoba", 1, "Leonardo Madelón"),
+	("Tigre", 1, "Diego Martínez"),
+	("Racing Club", 1, "Fernando Gago"),
+	("Barracas Central", 1, "Sergio Rondina"),
+	("Gimnasia", 1, "Sebastian Romero"),
+	("Instituto", 1, "Daniel Jiménez"),
+	("Colón", 1, "Néstor Gorosito"),
+	("Vélez", 1, "Marcelo Bravo"),
+	("Independiente", 1, "Ricardo Zielinski"),
+	("Atlético Tucumán", 1, "Lucas Pusineri"),
+	("Huracán", 1, "Sebastián Battaglia"),
+	("Banfield", 1, "Julio Falcioni"),
+	("Unión", 1, "Sebastián Méndez"),
+	("Arsenal", 1, "Federico Vilar");
 
 	
 INSERT INTO Liga (idLiga, nombre, idTemporada, idPais)
@@ -84,7 +86,7 @@ VALUES 		(1, "La Bombonera", "Estadio de Boca Juniors, ubicado en La Boca."),
 		(4, "El Bosque", "Estadio de Gimnasia, ubicado en La Plata");
 
 INSERT INTO Copa (idCopa, nombre, idTemporada, idContinente)
-VALUES 		(1, "CONMEBOL Libertadores de América", 1, 2);
+VALUES 		(1, "Libertadores de América", 1, 2);
 
 INSERT INTO Fecha_Partido (fecha)
 VALUES		(1),
@@ -119,24 +121,8 @@ VALUES 		(1, 1, 2, 15, 1, 2);
 INSERT INTO Partido_Liga (idPartido, idLiga)
 VALUES 		(1, 1);
 	
-CALL AltaUsuario ("SoyAdmin", "Administrador", "adminroot@gmail.com", 999.99, 18, "2004-12-25");
+CALL AltaUsuario ("SoyAdmin", "Administrador", "SuperAdmin", 61420233,  "adminroot@gmail.com", 18, "2004-12-25");
 
 CALL AltaPartidoLiga(1, 1, 2, 15, 1); 
 
 CALL AltaApuestaGol ();
-
-
-
-
--- Procedimientos NO CORRESPONDIENTES al código final. 
-
-
-UPDATE Usuario 
-SET mail = "adminroot@gmail.com",
-nombre = "Administrador"
-WHERE idUsuario = 1;
-
-DELETE FROM Partido WHERE idPartido = 8;
-DELETE FROM Equipo WHERE idEquipo=3;
-DELETE FROM Equipo WHERE idEquipo=4;
-
